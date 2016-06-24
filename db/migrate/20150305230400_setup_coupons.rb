@@ -21,7 +21,7 @@ class SetupCoupons < ActiveRecord::Migration
 
     create_table :coupon_redemptions do |t|
       t.belongs_to :coupon, null: false
-      t.string :attachable_id, null: true
+      t.id :attachable_id, null: true
       t.timestamps null: false
     end
   end
