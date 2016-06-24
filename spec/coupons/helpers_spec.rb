@@ -56,15 +56,9 @@ describe Coupons::Helpers do
     expect(options[:discount]).to eq(10)
   end
 
-  it 'saves user id' do
-    coupon = maker.create(amount: 10, type: 'amount')
-    maker.redeem(coupon.code, user_id: 1234)
-    expect(coupon.redemptions.last.user_id).to eq('1234')
-  end
-
   it 'saves order id' do
     coupon = maker.create(amount: 10, type: 'amount')
-    maker.redeem(coupon.code, order_id: 1234)
-    expect(coupon.redemptions.last.order_id).to eq('1234')
+    maker.redeem(coupon.code, attachable_id: 1234)
+    expect(coupon.redemptions.last.attachable_id).to eq('1234')
   end
 end
