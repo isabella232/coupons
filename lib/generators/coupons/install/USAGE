@@ -1,8 +1,8 @@
 Description:
-    Explain the generator
+    Install coupons
 
 Example:
-    rails generate install Thing
+    rails generate coupons:install
 
     This will create:
         what/will/it/create

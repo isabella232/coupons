@@ -58,7 +58,7 @@ describe Coupons::Helpers do
 
   it 'saves order id' do
     coupon = maker.create(amount: 10, type: 'amount')
-    maker.redeem(coupon.code, attachable_id: 1234)
-    expect(coupon.redemptions.last.attachable_id).to eq('1234')
+    maker.redeem(coupon.code, attachable_id: '1234')
+    expect(coupon.redemptions.last.attachable_id).to eq(1234)
   end
 end

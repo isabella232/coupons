@@ -1,5 +1,4 @@
-ActiveRecord::Migrator.migrations_paths << File.expand_path('../db/migrate', __FILE__)
-ActiveRecord::Migrator.migrations_paths << File.expand_path('../../db/migrate', __FILE__)
+ActiveRecord::Migrator.migrations_paths << File.expand_path('../../dummy/db/migrate', __FILE__)
 ActiveRecord::Migrator.migrate(ActiveRecord::Migrator.migrations_paths)
 ActiveRecord::Migration.maintain_test_schema!
 
